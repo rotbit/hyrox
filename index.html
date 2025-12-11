@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>2025 HYROX 深圳站 | 合作酒店速览</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --orange: #ff7a18;
+            --orange-dark: #ff4f14;
+            --purple: #6c63ff;
+            --bg: #0b0d1a;
+            --text: #f1f5f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: radial-gradient(circle at top, rgba(255,122,24,0.35), transparent 60%),
+                        radial-gradient(circle at 20% 20%, rgba(108,99,255,0.45), transparent 35%),
+                        var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 20px clamp(16px, 5vw, 60px) 60px;
+            line-height: 1.6;
+        }
+
+        .lang-toggle {
+            text-align: right;
+            margin-bottom: 15px;
+        }
+
+        .lang-toggle button {
+            border: none;
+            background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 999px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(255, 79, 20, 0.35);
+            transition: transform 0.15s ease, box-shadow 0.2s ease;
+        }
+
+        .lang-toggle button:active {
+            transform: translateY(1px);
+            box-shadow: 0 4px 16px rgba(255, 79, 20, 0.35);
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .hero h1 {
+            font-size: clamp(26px, 6vw, 46px);
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            margin-top: 10px;
+            font-size: clamp(15px, 3.8vw, 18px);
+            opacity: 0.85;
+        }
+
+        .label {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 8px 18px;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 14px;
+            letter-spacing: 0.2em;
+        }
+
+        .guide-tag {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 18px auto 0;
+            padding: 6px 20px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            letter-spacing: 0.3em;
+            font-size: 12px;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
+
+        .notice {
+            margin-top: 24px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 18px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .notice strong {
+            color: var(--orange);
+        }
+
+        .grid {
+            margin-top: 35px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: rgba(7, 11, 27, 0.9);
+            border-radius: 26px;
+            padding: 26px 24px 30px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 60%);
+            top: -50px;
+            right: -50px;
+            pointer-events: none;
+        }
+
+        .card h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .card .badge {
+            position: absolute;
+            top: 22px;
+            right: 24px;
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .card .price {
+            margin: 12px 0 18px;
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--orange);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 12px;
+        }
+
+        .info-line {
+            margin-top: 12px;
+            padding-left: 16px;
+            border-left: 2px solid rgba(255, 255, 255, 0.18);
+            font-size: 15px;
+        }
+
+        .info-line span {
+            display: block;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        .phone-link {
+            color: #ffdf5d;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        .phone-link:hover,
+        .phone-link:focus {
+            text-decoration: underline;
+        }
+
+        .cta {
+            margin-top: 35px;
+            background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+            padding: 22px;
+            border-radius: 24px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.8;
+            box-shadow: 0 12px 35px rgba(255, 122, 24, 0.35);
+        }
+
+        .cta b {
+            font-size: 18px;
+        }
+
+        .wish {
+            margin-top: 26px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .qr-placeholder {
+            margin-top: 20px;
+            padding: 26px;
+            border-radius: 18px;
+            border: 2px dashed rgba(255,255,255,0.6);
+            text-align: center;
+            font-size: 14px;
+            color: rgba(255,255,255,0.9);
+            background: rgba(0,0,0,0.15);
+        }
+
+        .qr-placeholder.light {
+            border-color: rgba(255,255,255,0.9);
+            background: rgba(255,255,255,0.12);
+            color: #fff;
+        }
+
+        .qr-placeholder img {
+            width: 180px;
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .qr-hint {
+            margin-top: 10px;
+            font-size: 13px;
+            opacity: 0.85;
+            text-align: center;
+        }
+
+        .lang-section {
+            display: none;
+        }
+
+        body.lang-zh .lang-section[data-lang="zh"],
+        body.lang-en .lang-section[data-lang="en"] {
+            display: block;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding-bottom: 40px;
+            }
+            .card {
+                padding: 22px;
+            }
+            .card .badge {
+                width: 44px;
+                height: 44px;
+                top: 18px;
+                right: 18px;
+            }
+            .card h2 {
+                font-size: 18px;
+            }
+            .card .price {
+                font-size: 32px;
+            }
+            .cta {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body class="lang-zh">
+    <div class="lang-toggle">
+        <button id="langToggle" type="button" aria-label="Switch language">Switch to English</button>
+    </div>
+
+    <section class="lang-section" data-lang="zh">
+        <header class="hero">
+            <div class="label">HYROX 2025 · 深圳站</div>
+            <div class="guide-tag">中文指南</div>
+            <h1>欢迎来到 2025 HYROX 深圳站</h1>
+            <p>本次赛事合作酒店，助力您在赛场之外也能享受舒适体验</p>
+            <div class="notice">
+                欢迎您来到 2025HYROX深圳站，本次赛事的合作酒店为：
+            </div>
+        </header>
+
+        <section>
+            <div class="grid">
+                <div class="card">
+                    <div class="badge">①</div>
+                    <h2>建国璞隐酒店（深圳华强店）</h2>
+                    <div class="tag">暗香居大床房、凌霜居双床房 | 含双早</div>
+                    <div class="price">¥680<span style="font-size:15px;font-weight:400;">/间</span></div>
+                    <p>合作优惠价：暗香居大床房、凌霜居双床房（每间包含2份早餐） 优惠价：680元</p>
+                    <div class="info-line">
+                        <span>地址</span>
+                        深圳市深南中路2081号
+                    </div>
+                    <div class="info-line">
+                        <span>专线客服电话</span>
+                        <a class="phone-link" href="tel:15279780385">15279780385</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="badge">②</div>
+                    <h2>如家精选酒店（深圳福田会展中心店）</h2>
+                    <div class="tag">高级大床房、双床房 | 含双早</div>
+                    <div class="price">¥570<span style="font-size:15px;font-weight:400;">/间</span></div>
+                    <p>合作优惠价：高级大床房、双床房（每间包含2份早餐） 优惠价：570元</p>
+                    <div class="info-line">
+                        <span>地址</span>
+                        深圳市福田区皇岗社区益田路3008号皇都广场A座
+                    </div>
+                    <div class="info-line">
+                        <span>专线客服电话</span>
+                        <a class="phone-link" href="tel:15221143751">15221143751</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="badge">③</div>
+                    <h2>如家酒店·neo（深圳福田竹子林地铁站店）</h2>
+                    <div class="tag">大床房、双床房 | 含双早</div>
+                    <div class="price">¥330<span style="font-size:15px;font-weight:400;">/间</span></div>
+                    <p>合作酒店优惠价格：大床房、双床房（每间包含2份早餐） 优惠价：330元</p>
+                    <div class="info-line">
+                        <span>地址</span>
+                        深圳市福田区竹子林七路2号益华大厦B1层
+                    </div>
+                    <div class="info-line">
+                        <span>专线客服电话</span>
+                        <a class="phone-link" href="tel:18890330966">18890330966</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="notice" style="margin-top:28px;">
+                以上合作酒店除主推房型外，其他房型均有优惠。如需享受优惠价格预定请扫描合作酒店方官方企V，发送<span style="color:#ffdf5d;font-weight:700;">“ROX”</span>即可获得优惠价格。
+            </div>
+            <div class="wish">预祝您比赛顺利，取得好成绩！</div>
+            <div class="qr-placeholder">
+                <img src="qrcode.png" alt="合作酒店官方企V二维码">
+                <p class="qr-hint">长按二维码即可保存至本地相册</p>
+            </div>
+        </section>
+    </section>
+
+    <section class="lang-section" data-lang="en">
+        <header class="hero">
+            <div class="label">HYROX 2025 · SHENZHEN</div>
+            <div class="guide-tag">ENGLISH GUIDE</div>
+            <h1>Welcome to the 2025 HYROX Shenzhen Station!</h1>
+            <p>The official partner hotels ensure a smooth stay so you can focus on race day.</p>
+            <div class="notice">
+                Welcome to the 2025 HYROX Shenzhen Station! The official partner hotels for this event are as follows:
+            </div>
+        </header>
+
+        <section>
+            <div class="grid">
+                <div class="card">
+                    <div class="badge">①</div>
+                    <h2>Jianguo Puyin Hotel (Shenzhen Huaqiang Branch)</h2>
+                    <div class="tag">Dark Fragrance King Room & Ling Shuang Twin Room | With Breakfast</div>
+                    <div class="price">¥680<span style="font-size:15px;font-weight:400;">/room</span></div>
+                    <p>Cooperation Discount Rate: Dark Fragrance King Room & Ling Shuang Twin Room (each including 2 breakfasts) | Discounted Price: CNY 680</p>
+                    <div class="info-line">
+                        <span>Address</span>
+                        No. 2081 Shennan Middle Road, Shenzhen
+                    </div>
+                    <div class="info-line">
+                        <span>Dedicated Customer Service Hotline</span>
+                        <a class="phone-link" href="tel:15279780385">15279780385</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="badge">②</div>
+                    <h2>Home Inn Plus (Shenzhen Futian Convention & Exhibition Center Branch)</h2>
+                    <div class="tag">Superior King Room & Twin Room | With Breakfast</div>
+                    <div class="price">¥570<span style="font-size:15px;font-weight:400;">/room</span></div>
+                    <p>Cooperation Discount Rate: Superior King Room & Twin Room (each including 2 breakfasts) | Discounted Price: CNY 570</p>
+                    <div class="info-line">
+                        <span>Address</span>
+                        Block A, Huangdu Plaza, No. 3008 Yitian Road, Huanggang Community, Futian District, Shenzhen
+                    </div>
+                    <div class="info-line">
+                        <span>Dedicated Customer Service Hotline</span>
+                        <a class="phone-link" href="tel:15221143751">15221143751</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="badge">③</div>
+                    <h2>Home Inn neo (Shenzhen Futian Zhuzilin Metro Station Branch)</h2>
+                    <div class="tag">King Room & Twin Room | With Breakfast</div>
+                    <div class="price">¥330<span style="font-size:15px;font-weight:400;">/room</span></div>
+                    <p>Cooperation Discount Rate: King Room & Twin Room (each including 2 breakfasts) | Discounted Price: CNY 330</p>
+                    <div class="info-line">
+                        <span>Address</span>
+                        B1 Floor, Yihua Building, No. 2 Qilu Road, Zhuzilin, Futian District, Shenzhen
+                    </div>
+                    <div class="info-line">
+                        <span>Dedicated Customer Service Hotline</span>
+                        <a class="phone-link" href="tel:18890330966">18890330966</a>
+                    </div>
+                    <div class="qr-placeholder light">
+                        <img src="qrcode.png" alt="Official partner QR code">
+                        <p class="qr-hint">Long press the QR code to save it locally</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta">
+                <b>Need the best rate?</b><br>
+                Scan the partner hotel's official WeChat Work account and send “ROX” to unlock the discounted prices.
+            </div>
+            <div class="wish">Wish you a successful race and outstanding performance!</div>
+        </section>
+    </section>
+
+    <script>
+        (function () {
+            var body = document.body;
+            var toggleBtn = document.getElementById('langToggle');
+            if (!body || !toggleBtn) return;
+
+            function readStoredLang() {
+                try {
+                    var stored = localStorage.getItem('hyroxLang');
+                    if (stored === 'zh' || stored === 'en') return stored;
+                } catch (err) {}
+                return null;
+            }
+
+            function detectLanguage() {
+                var stored = readStoredLang();
+                if (stored) return stored;
+                var lang = (navigator.languages && navigator.languages[0]) || navigator.language || navigator.userLanguage || 'en';
+                return String(lang).toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en';
+            }
+
+            function setLanguage(lang) {
+                var target = lang === 'zh' ? 'zh' : 'en';
+                body.classList.toggle('lang-zh', target === 'zh');
+                body.classList.toggle('lang-en', target === 'en');
+                document.documentElement.lang = target === 'zh' ? 'zh-CN' : 'en';
+                toggleBtn.textContent = target === 'zh' ? 'Switch to English' : '切换至中文';
+                toggleBtn.setAttribute('aria-label', target === 'zh' ? 'Switch to English' : 'Switch to Chinese');
+                try {
+                    localStorage.setItem('hyroxLang', target);
+                } catch (err) {}
+            }
+
+            setLanguage(detectLanguage());
+
+            toggleBtn.addEventListener('click', function () {
+                var next = body.classList.contains('lang-zh') ? 'en' : 'zh';
+                setLanguage(next);
+            });
+        })();
+    </script>
+</body>
+</html>
